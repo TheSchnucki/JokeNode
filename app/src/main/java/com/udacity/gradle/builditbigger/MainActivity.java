@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.udacity.gradle.builditbigger.jokepresentationdeluxe.JokePresentationActivity;
 import com.udacity.gradle.builditbigger.worldofjokes.JokeProvider;
+import com.udacity.gradle.builditbigger.EnpointAsyncTask;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -44,11 +45,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Intent intent = new Intent(this, JokePresentationActivity.class);
-        String joke = JokeProvider.getJoke();
-
-        intent.putExtra("Joke", joke);
-        startActivity(intent);
+        EnpointAsyncTask asyncTask = new EnpointAsyncTask(this);
+        asyncTask.execute();
     }
 
 

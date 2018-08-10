@@ -44,6 +44,7 @@ dependencies {
 
     implementation project(":worldofjokes")
     implementation project(":jokepresentationdeluxe")
+    implementation project(":backend")
 
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
