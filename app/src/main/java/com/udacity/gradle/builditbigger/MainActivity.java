@@ -1,16 +1,10 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
-
-import com.udacity.gradle.builditbigger.jokepresentationdeluxe.JokePresentationActivity;
-import com.udacity.gradle.builditbigger.worldofjokes.JokeProvider;
-import com.udacity.gradle.builditbigger.EnpointAsyncTask;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -45,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        EnpointAsyncTask asyncTask = new EnpointAsyncTask(this);
+        EndpointAsyncTask asyncTask = new EndpointAsyncTask(this);
         asyncTask.execute();
     }
 

@@ -18,13 +18,13 @@ import java.io.IOException;
 /**
  * Created by theSchnucki on 10.08.2018.
  */
-public class EnpointAsyncTask extends AsyncTask <Void, Void, String> {
+public class EndpointAsyncTask extends AsyncTask <Void, Void, String> {
 
     private static MyApi myApiService = null;
     private Context mContext;
 
     //Constructor
-    public EnpointAsyncTask (Context context) {
+    public EndpointAsyncTask(Context context) {
         mContext = context;
     }
 
