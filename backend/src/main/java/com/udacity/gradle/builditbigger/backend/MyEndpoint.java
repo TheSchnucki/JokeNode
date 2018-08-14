@@ -6,6 +6,8 @@ import com.google.api.server.spi.config.ApiNamespace;
 
 import javax.inject.Named;
 
+import com.udacity.gradle.builditbigger.worldofjokes.JokeProvider;
+
 /** An endpoint class we are exposing */
 @Api(
         name = "myApi",
