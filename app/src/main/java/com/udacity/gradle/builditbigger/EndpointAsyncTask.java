@@ -10,7 +10,6 @@ import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 import com.udacity.gradle.builditbigger.jokepresentationdeluxe.JokePresentationActivity;
-import com.udacity.gradle.builditbigger.worldofjokes.JokeProvider;
 
 import java.io.IOException;
 
@@ -48,7 +47,7 @@ public class EndpointAsyncTask extends AsyncTask <Void, Void, String> {
         }
 
         try {
-            return myApiService.sayHi("Mark").execute().getData();
+            return myApiService.tellJoke().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
