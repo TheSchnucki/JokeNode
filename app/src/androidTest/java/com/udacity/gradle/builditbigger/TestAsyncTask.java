@@ -14,6 +14,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.not;
 
+
 /**
  * Created by theSchnucki on 13.08.2018.
  */
@@ -21,15 +22,18 @@ import static org.hamcrest.Matchers.not;
 @RunWith(AndroidJUnit4.class)
 public class TestAsyncTask {
 
+    private static final String LOG_TAG = TestAsyncTask.class.getSimpleName();
+
     @Rule
     public ActivityTestRule<MainActivity> mMainActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
     public void checkAsyncTask() {
 
-        onView(withId(R.id.joke_btn)).perform(click());
+       onView(withId(R.id.joke_btn)).perform(click());
 
-        onView(withId(R.id.joke_tv)).check(matches(not(withText(""))));
+       onView(withId(R.id.joke_tv)).check(matches(not(withText(""))));
+       onView(withId(R.id.joke_tv)).check(matches(not(ErrorTextMatcher.withErrorText("Error:"))));
     }
 
 
